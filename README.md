@@ -1,6 +1,12 @@
 # 507finalproject
+
+File:
+final.py
+final_test.py(for unit testing)
+
+
 [Overview & Preparation]
-For this project, when you type into the city’s name for searching, it will return the results and detailed information of available restaurants, events within that city. I use Tripadvisor and Yelp for my data sources, and Yelp requires my API key, and that’s for the authentication.
+For this project, the file should be run is "final.py". When you type into the city’s name for searching, it will return the results and detailed information of available restaurants, events within that city. I use Tripadvisor and Yelp for my data sources, and Yelp requires my API key, and that’s for the authentication.
 
 The API key should be placed in a file called "secret.py", and the content should be like: "api_kei = 'your Yelp API key'"
 
