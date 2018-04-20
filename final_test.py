@@ -56,7 +56,6 @@ class TestTripAdvisor(unittest.TestCase):
 
 
 
-
 class TestPlotly(unittest.TestCase):
 
 	def test_show_plotly(self):
