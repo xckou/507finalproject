@@ -1,0 +1,29 @@
+<!-- attending.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<body>
+<h3>The events happening in Seattle are</h3>
+
+<table border=1>
+    <tr>
+        <th>Name</th>
+        <th>Attending Number</th>
+        <th>Category</th>
+        <th>Cost</th>
+    </tr>
+{% for item in my_list %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+
+</div>
+</body>
+</html>
