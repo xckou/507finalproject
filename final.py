@@ -19,8 +19,9 @@ import requests
 import sys
 import urllib
 
-city_name = 'Seattle_Washington'
-geo_code = 'g60878'
+city_name = input("Please input the place for searching (format example:'Seattle_Washington')")
+if city_name == 'Seattle_Washington':
+    geo_code = 'g60878'
 
 
 print('\n\n\tStart Scraping\t\n\n')

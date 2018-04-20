@@ -47,6 +47,30 @@ def tripadvisor_view():
 	return render_template('tripadvisor.html',my_list = tripadvisor_view_list)
 
 
+
+@app.route('/tripadvisoryelp')
+def tripadvisor_yelp():
+	conn = sqlite3.connect('finalproject.db')
+	cur = conn.cursor()
+	statement = '''
+				SELECT TripAdvisor.Name, TripAdvisor.Tag,YelpResturant.Phone,TripAdvisor.Url,YelpResturant.Url
+				FROM TripAdvisor
+				JOIN YelpResturant
+				ON TripAdvisor.Name = YelpResturant.Name
+				'''
+	results = cur.execute(statement)
+	tripadvisor_yelp_list = []
+	for row in results:
+		name = row[0]
+		tag = row[1]
+		phone = row[2]
+		turl = row[3]
+		yurl = row[4]
+
+		tripadvisor_yelp_list.append([name,tag,phone,turl,yurl])
+	return render_template('tripadvisoryelp.html',my_list = tripadvisor_yelp_list)
+
+
 if __name__ == '__main__':  
 	print('starting Flask app', app.name)  
 	app.run(debug=True)

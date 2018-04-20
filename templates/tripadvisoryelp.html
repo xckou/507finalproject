@@ -1,0 +1,34 @@
+<!-- tripadvisoryelp.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<body>
+<h3>Resturant Both on Yelp and Tripadvisor:</h3>
+
+<table border=1>
+    <tr>
+        <th>Name</th>
+        <th>Tag</th>
+        <th>Phone</th>
+        <th>Tripadvisor Url</th>
+        <th>Yelp Url</th>
+
+    </tr>
+{% for item in my_list %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+
+    </tr>
+{% endfor %}
+</table>
+
+
+</div>
+</body>
+</html>
